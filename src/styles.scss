@@ -16,3 +16,49 @@
 @import "./sass/sections/contact";
 @import "./sass/sections/hero";
 @import "./sass/sections/projects";
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333; /* Choose your desired background color */
+    z-index: 1000;
+    overflow: hidden;
+    transition: top 0.3s;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .nav-list li {
+    display: inline-block;
+  }
+  
+  .nav-list a {
+    display: block;
+    padding: 11px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+  
+  .nav-list a:hover {
+    background-color: #555; /* Choose your desired hover background color */
+  }
+  
+  /* Add the overscroll feature */
+  section {
+    scroll-snap-align: start;
+    overscroll-behavior-y: contain;
+  }
+  
+  /* Add a shadow to the navigation bar when overscrolled */
+  body:not(.at-top) .navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
